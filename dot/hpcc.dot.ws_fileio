@@ -1,0 +1,58 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node118" [ label="ws_fileio" shape="polygon"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node118" -> "node151" // ws_fileio -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node153" [ label="mp" shape="polygon"];
+    "node118" -> "node153" // ws_fileio -> mp
+    "node153" -> "node151" // mp -> jlib
+    "node149" [ label="hrpc" shape="polygon"];
+    "node118" -> "node149" // ws_fileio -> hrpc
+    "node149" -> "node151" // hrpc -> jlib
+    "node149" -> "node153" // hrpc -> mp
+    "node59" [ label="remote" shape="polygon"];
+    "node118" -> "node59" // ws_fileio -> remote
+    "node59" -> "node151" // remote -> jlib
+    "node59" -> "node153" // remote -> mp
+    "node66" [ label="dalibase" shape="polygon"];
+    "node118" -> "node66" // ws_fileio -> dalibase
+    "node66" -> "node151" // dalibase -> jlib
+    "node66" -> "node153" // dalibase -> mp
+    "node66" -> "node149" // dalibase -> hrpc
+    "node66" -> "node59" // dalibase -> remote
+    "node55" [ label="environment" shape="polygon"];
+    "node118" -> "node55" // ws_fileio -> environment
+    "node55" -> "node151" // environment -> jlib
+    "node55" -> "node153" // environment -> mp
+    "node55" -> "node59" // environment -> remote
+    "node55" -> "node66" // environment -> dalibase
+    "node180" [ label="/usr/lib/libxalan-c.so" shape="ellipse"];
+    "node118" -> "node180" // ws_fileio -> /usr/lib/libxalan-c.so
+    "node181" [ label="/usr/lib/libxalanMsg.so" shape="ellipse"];
+    "node118" -> "node181" // ws_fileio -> /usr/lib/libxalanMsg.so
+    "node182" [ label="/usr/lib/libxerces-c.so" shape="ellipse"];
+    "node118" -> "node182" // ws_fileio -> /usr/lib/libxerces-c.so
+    "node160" [ label="xmllib" shape="polygon"];
+    "node118" -> "node160" // ws_fileio -> xmllib
+    "node160" -> "node180" // xmllib -> /usr/lib/libxalan-c.so
+    "node160" -> "node181" // xmllib -> /usr/lib/libxalanMsg.so
+    "node160" -> "node182" // xmllib -> /usr/lib/libxerces-c.so
+    "node160" -> "node151" // xmllib -> jlib
+    "node110" [ label="esphttp" shape="polygon"];
+    "node118" -> "node110" // ws_fileio -> esphttp
+    "node110" -> "node180" // esphttp -> /usr/lib/libxalan-c.so
+    "node110" -> "node181" // esphttp -> /usr/lib/libxalanMsg.so
+    "node110" -> "node182" // esphttp -> /usr/lib/libxerces-c.so
+    "node110" -> "node151" // esphttp -> jlib
+    "node110" -> "node160" // esphttp -> xmllib
+}

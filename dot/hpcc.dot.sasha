@@ -1,0 +1,25 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node85" [ label="sasha" shape="house"];
+    "node180" [ label="/usr/lib/libxalan-c.so" shape="ellipse"];
+    "node85" -> "node180" // sasha -> /usr/lib/libxalan-c.so
+    "node181" [ label="/usr/lib/libxalanMsg.so" shape="ellipse"];
+    "node85" -> "node181" // sasha -> /usr/lib/libxalanMsg.so
+    "node182" [ label="/usr/lib/libxerces-c.so" shape="ellipse"];
+    "node85" -> "node182" // sasha -> /usr/lib/libxerces-c.so
+    "node151" [ label="jlib" shape="polygon"];
+    "node85" -> "node151" // sasha -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node153" [ label="mp" shape="polygon"];
+    "node85" -> "node153" // sasha -> mp
+    "node153" -> "node151" // mp -> jlib
+}

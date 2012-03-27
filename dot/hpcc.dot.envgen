@@ -1,0 +1,62 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node89" [ label="envgen" shape="house"];
+    "node87" [ label="deploy" shape="polygon"];
+    "node89" -> "node87" // envgen -> deploy
+    "node151" [ label="jlib" shape="polygon"];
+    "node87" -> "node151" // deploy -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node55" [ label="environment" shape="polygon"];
+    "node87" -> "node55" // deploy -> environment
+    "node55" -> "node151" // environment -> jlib
+    "node153" [ label="mp" shape="polygon"];
+    "node55" -> "node153" // environment -> mp
+    "node153" -> "node151" // mp -> jlib
+    "node59" [ label="remote" shape="polygon"];
+    "node55" -> "node59" // environment -> remote
+    "node59" -> "node151" // remote -> jlib
+    "node59" -> "node153" // remote -> mp
+    "node66" [ label="dalibase" shape="polygon"];
+    "node55" -> "node66" // environment -> dalibase
+    "node66" -> "node151" // dalibase -> jlib
+    "node66" -> "node153" // dalibase -> mp
+    "node149" [ label="hrpc" shape="polygon"];
+    "node66" -> "node149" // dalibase -> hrpc
+    "node149" -> "node151" // hrpc -> jlib
+    "node149" -> "node153" // hrpc -> mp
+    "node66" -> "node59" // dalibase -> remote
+    "node160" [ label="xmllib" shape="polygon"];
+    "node87" -> "node160" // deploy -> xmllib
+    "node180" [ label="/usr/lib/libxalan-c.so" shape="ellipse"];
+    "node160" -> "node180" // xmllib -> /usr/lib/libxalan-c.so
+    "node181" [ label="/usr/lib/libxalanMsg.so" shape="ellipse"];
+    "node160" -> "node181" // xmllib -> /usr/lib/libxalanMsg.so
+    "node182" [ label="/usr/lib/libxerces-c.so" shape="ellipse"];
+    "node160" -> "node182" // xmllib -> /usr/lib/libxerces-c.so
+    "node160" -> "node151" // xmllib -> jlib
+    "node156" [ label="securesocket" shape="polygon"];
+    "node87" -> "node156" // deploy -> securesocket
+    "node156" -> "node151" // securesocket -> jlib
+    "node191" [ label="/usr/lib/x86_64-linux-gnu/libssl.so" shape="ellipse"];
+    "node156" -> "node191" // securesocket -> /usr/lib/x86_64-linux-gnu/libssl.so
+    "node192" [ label="/usr/lib/x86_64-linux-gnu/libcrypto.so" shape="ellipse"];
+    "node156" -> "node192" // securesocket -> /usr/lib/x86_64-linux-gnu/libcrypto.so
+    "node88" [ label="deployutils" shape="polygon"];
+    "node89" -> "node88" // envgen -> deployutils
+    "node88" -> "node151" // deployutils -> jlib
+    "node88" -> "node55" // deployutils -> environment
+    "node88" -> "node160" // deployutils -> xmllib
+    "node88" -> "node87" // deployutils -> deploy
+    "node89" -> "node151" // envgen -> jlib
+    "node89" -> "node55" // envgen -> environment
+    "node89" -> "node156" // envgen -> securesocket
+}

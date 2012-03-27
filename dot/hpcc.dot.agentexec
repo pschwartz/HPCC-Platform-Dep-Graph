@@ -1,0 +1,75 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node90" [ label="agentexec" shape="house"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node90" -> "node151" // agentexec -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node66" [ label="dalibase" shape="polygon"];
+    "node90" -> "node66" // agentexec -> dalibase
+    "node66" -> "node151" // dalibase -> jlib
+    "node153" [ label="mp" shape="polygon"];
+    "node66" -> "node153" // dalibase -> mp
+    "node153" -> "node151" // mp -> jlib
+    "node149" [ label="hrpc" shape="polygon"];
+    "node66" -> "node149" // dalibase -> hrpc
+    "node149" -> "node151" // hrpc -> jlib
+    "node149" -> "node153" // hrpc -> mp
+    "node59" [ label="remote" shape="polygon"];
+    "node66" -> "node59" // dalibase -> remote
+    "node59" -> "node151" // remote -> jlib
+    "node59" -> "node153" // remote -> mp
+    "node146" [ label="eclrtl" shape="polygon"];
+    "node90" -> "node146" // agentexec -> eclrtl
+    "node186" [ label="/usr/lib/libboost_regex-mt.so" shape="ellipse"];
+    "node146" -> "node186" // eclrtl -> /usr/lib/libboost_regex-mt.so
+    "node183" [ label="/usr/lib/libicuuc.so" shape="ellipse"];
+    "node146" -> "node183" // eclrtl -> /usr/lib/libicuuc.so
+    "node184" [ label="/usr/lib/libicui18n.so" shape="ellipse"];
+    "node146" -> "node184" // eclrtl -> /usr/lib/libicui18n.so
+    "node185" [ label="/usr/lib/libicudata.so" shape="ellipse"];
+    "node146" -> "node185" // eclrtl -> /usr/lib/libicudata.so
+    "node146" -> "node151" // eclrtl -> jlib
+    "node147" [ label="nbcd" shape="polygon"];
+    "node146" -> "node147" // eclrtl -> nbcd
+    "node147" -> "node151" // nbcd -> jlib
+    "node64" [ label="workunit" shape="polygon"];
+    "node90" -> "node64" // agentexec -> workunit
+    "node64" -> "node151" // workunit -> jlib
+    "node64" -> "node66" // workunit -> dalibase
+    "node54" [ label="dllserver" shape="polygon"];
+    "node64" -> "node54" // workunit -> dllserver
+    "node176" [ label="/usr/lib/x86_64-linux-gnu/libz.so" shape="ellipse"];
+    "node54" -> "node176" // dllserver -> /usr/lib/x86_64-linux-gnu/libz.so
+    "node54" -> "node151" // dllserver -> jlib
+    "node54" -> "node153" // dllserver -> mp
+    "node54" -> "node149" // dllserver -> hrpc
+    "node54" -> "node146" // dllserver -> eclrtl
+    "node54" -> "node59" // dllserver -> remote
+    "node54" -> "node66" // dllserver -> dalibase
+    "node55" [ label="environment" shape="polygon"];
+    "node54" -> "node55" // dllserver -> environment
+    "node55" -> "node151" // environment -> jlib
+    "node55" -> "node153" // environment -> mp
+    "node55" -> "node59" // environment -> remote
+    "node55" -> "node66" // environment -> dalibase
+    "node177" [ label="/usr/lib/libbfd.so" shape="ellipse"];
+    "node54" -> "node177" // dllserver -> /usr/lib/libbfd.so
+    "node178" [ label="/usr/lib/libiberty_pic.a" shape="ellipse"];
+    "node54" -> "node178" // dllserver -> /usr/lib/libiberty_pic.a
+    "node64" -> "node147" // workunit -> nbcd
+    "node64" -> "node146" // workunit -> eclrtl
+    "node53" [ label="deftype" shape="polygon"];
+    "node64" -> "node53" // workunit -> deftype
+    "node53" -> "node151" // deftype -> jlib
+    "node53" -> "node147" // deftype -> nbcd
+    "node53" -> "node146" // deftype -> eclrtl
+}

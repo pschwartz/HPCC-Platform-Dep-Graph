@@ -1,0 +1,32 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node129" [ label="soapplus" shape="house"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node129" -> "node151" // soapplus -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node160" [ label="xmllib" shape="polygon"];
+    "node129" -> "node160" // soapplus -> xmllib
+    "node180" [ label="/usr/lib/libxalan-c.so" shape="ellipse"];
+    "node160" -> "node180" // xmllib -> /usr/lib/libxalan-c.so
+    "node181" [ label="/usr/lib/libxalanMsg.so" shape="ellipse"];
+    "node160" -> "node181" // xmllib -> /usr/lib/libxalanMsg.so
+    "node182" [ label="/usr/lib/libxerces-c.so" shape="ellipse"];
+    "node160" -> "node182" // xmllib -> /usr/lib/libxerces-c.so
+    "node160" -> "node151" // xmllib -> jlib
+    "node156" [ label="securesocket" shape="polygon"];
+    "node129" -> "node156" // soapplus -> securesocket
+    "node156" -> "node151" // securesocket -> jlib
+    "node191" [ label="/usr/lib/x86_64-linux-gnu/libssl.so" shape="ellipse"];
+    "node156" -> "node191" // securesocket -> /usr/lib/x86_64-linux-gnu/libssl.so
+    "node192" [ label="/usr/lib/x86_64-linux-gnu/libcrypto.so" shape="ellipse"];
+    "node156" -> "node192" // securesocket -> /usr/lib/x86_64-linux-gnu/libcrypto.so
+}

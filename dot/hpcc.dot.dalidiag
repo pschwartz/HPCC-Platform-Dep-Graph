@@ -1,0 +1,33 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node69" [ label="dalidiag" shape="house"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node69" -> "node151" // dalidiag -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node153" [ label="mp" shape="polygon"];
+    "node69" -> "node153" // dalidiag -> mp
+    "node153" -> "node151" // mp -> jlib
+    "node149" [ label="hrpc" shape="polygon"];
+    "node69" -> "node149" // dalidiag -> hrpc
+    "node149" -> "node151" // hrpc -> jlib
+    "node149" -> "node153" // hrpc -> mp
+    "node59" [ label="remote" shape="polygon"];
+    "node69" -> "node59" // dalidiag -> remote
+    "node59" -> "node151" // remote -> jlib
+    "node59" -> "node153" // remote -> mp
+    "node66" [ label="dalibase" shape="polygon"];
+    "node69" -> "node66" // dalidiag -> dalibase
+    "node66" -> "node151" // dalibase -> jlib
+    "node66" -> "node153" // dalibase -> mp
+    "node66" -> "node149" // dalibase -> hrpc
+    "node66" -> "node59" // dalibase -> remote
+}

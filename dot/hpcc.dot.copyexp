@@ -1,0 +1,16 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node49" [ label="copyexp" shape="house"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node49" -> "node151" // copyexp -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+}

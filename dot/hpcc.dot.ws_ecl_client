@@ -1,0 +1,35 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node107" [ label="ws_ecl_client" shape="polygon"];
+    "node180" [ label="/usr/lib/libxalan-c.so" shape="ellipse"];
+    "node107" -> "node180" // ws_ecl_client -> /usr/lib/libxalan-c.so
+    "node181" [ label="/usr/lib/libxalanMsg.so" shape="ellipse"];
+    "node107" -> "node181" // ws_ecl_client -> /usr/lib/libxalanMsg.so
+    "node182" [ label="/usr/lib/libxerces-c.so" shape="ellipse"];
+    "node107" -> "node182" // ws_ecl_client -> /usr/lib/libxerces-c.so
+    "node151" [ label="jlib" shape="polygon"];
+    "node107" -> "node151" // ws_ecl_client -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node160" [ label="xmllib" shape="polygon"];
+    "node107" -> "node160" // ws_ecl_client -> xmllib
+    "node160" -> "node180" // xmllib -> /usr/lib/libxalan-c.so
+    "node160" -> "node181" // xmllib -> /usr/lib/libxalanMsg.so
+    "node160" -> "node182" // xmllib -> /usr/lib/libxerces-c.so
+    "node160" -> "node151" // xmllib -> jlib
+    "node110" [ label="esphttp" shape="polygon"];
+    "node107" -> "node110" // ws_ecl_client -> esphttp
+    "node110" -> "node180" // esphttp -> /usr/lib/libxalan-c.so
+    "node110" -> "node181" // esphttp -> /usr/lib/libxalanMsg.so
+    "node110" -> "node182" // esphttp -> /usr/lib/libxerces-c.so
+    "node110" -> "node151" // esphttp -> jlib
+    "node110" -> "node160" // esphttp -> xmllib
+}

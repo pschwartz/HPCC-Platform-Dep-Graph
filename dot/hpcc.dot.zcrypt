@@ -1,0 +1,12 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node159" [ label="zcrypt" shape="polygon"];
+    "node176" [ label="/usr/lib/x86_64-linux-gnu/libz.so" shape="ellipse"];
+    "node159" -> "node176" // zcrypt -> /usr/lib/x86_64-linux-gnu/libz.so
+    "node191" [ label="/usr/lib/x86_64-linux-gnu/libssl.so" shape="ellipse"];
+    "node159" -> "node191" // zcrypt -> /usr/lib/x86_64-linux-gnu/libssl.so
+    "node192" [ label="/usr/lib/x86_64-linux-gnu/libcrypto.so" shape="ellipse"];
+    "node159" -> "node192" // zcrypt -> /usr/lib/x86_64-linux-gnu/libcrypto.so
+}

@@ -1,0 +1,143 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node112" [ label="EclDirect" shape="polygon"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node112" -> "node151" // EclDirect -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node160" [ label="xmllib" shape="polygon"];
+    "node112" -> "node160" // EclDirect -> xmllib
+    "node180" [ label="/usr/lib/libxalan-c.so" shape="ellipse"];
+    "node160" -> "node180" // xmllib -> /usr/lib/libxalan-c.so
+    "node181" [ label="/usr/lib/libxalanMsg.so" shape="ellipse"];
+    "node160" -> "node181" // xmllib -> /usr/lib/libxalanMsg.so
+    "node182" [ label="/usr/lib/libxerces-c.so" shape="ellipse"];
+    "node160" -> "node182" // xmllib -> /usr/lib/libxerces-c.so
+    "node160" -> "node151" // xmllib -> jlib
+    "node110" [ label="esphttp" shape="polygon"];
+    "node112" -> "node110" // EclDirect -> esphttp
+    "node110" -> "node180" // esphttp -> /usr/lib/libxalan-c.so
+    "node110" -> "node181" // esphttp -> /usr/lib/libxalanMsg.so
+    "node110" -> "node182" // esphttp -> /usr/lib/libxerces-c.so
+    "node110" -> "node151" // esphttp -> jlib
+    "node110" -> "node160" // esphttp -> xmllib
+    "node155" [ label="LdapSecurity" shape="polygon"];
+    "node112" -> "node155" // EclDirect -> LdapSecurity
+    "node155" -> "node151" // LdapSecurity -> jlib
+    "node189" [ label="/usr/lib/x86_64-linux-gnu/libldap_r.so" shape="ellipse"];
+    "node155" -> "node189" // LdapSecurity -> /usr/lib/x86_64-linux-gnu/libldap_r.so
+    "node190" [ label="/usr/lib/x86_64-linux-gnu/liblber.so" shape="ellipse"];
+    "node155" -> "node190" // LdapSecurity -> /usr/lib/x86_64-linux-gnu/liblber.so
+    "node153" [ label="mp" shape="polygon"];
+    "node112" -> "node153" // EclDirect -> mp
+    "node153" -> "node151" // mp -> jlib
+    "node149" [ label="hrpc" shape="polygon"];
+    "node112" -> "node149" // EclDirect -> hrpc
+    "node149" -> "node151" // hrpc -> jlib
+    "node149" -> "node153" // hrpc -> mp
+    "node59" [ label="remote" shape="polygon"];
+    "node112" -> "node59" // EclDirect -> remote
+    "node59" -> "node151" // remote -> jlib
+    "node59" -> "node153" // remote -> mp
+    "node66" [ label="dalibase" shape="polygon"];
+    "node112" -> "node66" // EclDirect -> dalibase
+    "node66" -> "node151" // dalibase -> jlib
+    "node66" -> "node153" // dalibase -> mp
+    "node66" -> "node149" // dalibase -> hrpc
+    "node66" -> "node59" // dalibase -> remote
+    "node55" [ label="environment" shape="polygon"];
+    "node112" -> "node55" // EclDirect -> environment
+    "node55" -> "node151" // environment -> jlib
+    "node55" -> "node153" // environment -> mp
+    "node55" -> "node59" // environment -> remote
+    "node55" -> "node66" // environment -> dalibase
+    "node54" [ label="dllserver" shape="polygon"];
+    "node112" -> "node54" // EclDirect -> dllserver
+    "node176" [ label="/usr/lib/x86_64-linux-gnu/libz.so" shape="ellipse"];
+    "node54" -> "node176" // dllserver -> /usr/lib/x86_64-linux-gnu/libz.so
+    "node54" -> "node151" // dllserver -> jlib
+    "node54" -> "node153" // dllserver -> mp
+    "node54" -> "node149" // dllserver -> hrpc
+    "node146" [ label="eclrtl" shape="polygon"];
+    "node54" -> "node146" // dllserver -> eclrtl
+    "node186" [ label="/usr/lib/libboost_regex-mt.so" shape="ellipse"];
+    "node146" -> "node186" // eclrtl -> /usr/lib/libboost_regex-mt.so
+    "node183" [ label="/usr/lib/libicuuc.so" shape="ellipse"];
+    "node146" -> "node183" // eclrtl -> /usr/lib/libicuuc.so
+    "node184" [ label="/usr/lib/libicui18n.so" shape="ellipse"];
+    "node146" -> "node184" // eclrtl -> /usr/lib/libicui18n.so
+    "node185" [ label="/usr/lib/libicudata.so" shape="ellipse"];
+    "node146" -> "node185" // eclrtl -> /usr/lib/libicudata.so
+    "node146" -> "node151" // eclrtl -> jlib
+    "node147" [ label="nbcd" shape="polygon"];
+    "node146" -> "node147" // eclrtl -> nbcd
+    "node147" -> "node151" // nbcd -> jlib
+    "node54" -> "node59" // dllserver -> remote
+    "node54" -> "node66" // dllserver -> dalibase
+    "node54" -> "node55" // dllserver -> environment
+    "node177" [ label="/usr/lib/libbfd.so" shape="ellipse"];
+    "node54" -> "node177" // dllserver -> /usr/lib/libbfd.so
+    "node178" [ label="/usr/lib/libiberty_pic.a" shape="ellipse"];
+    "node54" -> "node178" // dllserver -> /usr/lib/libiberty_pic.a
+    "node112" -> "node147" // EclDirect -> nbcd
+    "node112" -> "node146" // EclDirect -> eclrtl
+    "node53" [ label="deftype" shape="polygon"];
+    "node112" -> "node53" // EclDirect -> deftype
+    "node53" -> "node151" // deftype -> jlib
+    "node53" -> "node147" // deftype -> nbcd
+    "node53" -> "node146" // deftype -> eclrtl
+    "node64" [ label="workunit" shape="polygon"];
+    "node112" -> "node64" // EclDirect -> workunit
+    "node64" -> "node151" // workunit -> jlib
+    "node64" -> "node66" // workunit -> dalibase
+    "node64" -> "node54" // workunit -> dllserver
+    "node64" -> "node147" // workunit -> nbcd
+    "node64" -> "node146" // workunit -> eclrtl
+    "node64" -> "node53" // workunit -> deftype
+    "node150" [ label="jhtree" shape="polygon"];
+    "node112" -> "node150" // EclDirect -> jhtree
+    "node150" -> "node151" // jhtree -> jlib
+    "node99" [ label="hql" shape="polygon"];
+    "node112" -> "node99" // EclDirect -> hql
+    "node99" -> "node151" // hql -> jlib
+    "node99" -> "node147" // hql -> nbcd
+    "node99" -> "node146" // hql -> eclrtl
+    "node99" -> "node53" // hql -> deftype
+    "node56" [ label="fileview2" shape="polygon"];
+    "node112" -> "node56" // EclDirect -> fileview2
+    "node56" -> "node151" // fileview2 -> jlib
+    "node56" -> "node153" // fileview2 -> mp
+    "node56" -> "node149" // fileview2 -> hrpc
+    "node56" -> "node59" // fileview2 -> remote
+    "node56" -> "node147" // fileview2 -> nbcd
+    "node56" -> "node146" // fileview2 -> eclrtl
+    "node56" -> "node150" // fileview2 -> jhtree
+    "node56" -> "node66" // fileview2 -> dalibase
+    "node56" -> "node55" // fileview2 -> environment
+    "node56" -> "node54" // fileview2 -> dllserver
+    "node56" -> "node53" // fileview2 -> deftype
+    "node56" -> "node64" // fileview2 -> workunit
+    "node63" [ label="thorhelper" shape="polygon"];
+    "node56" -> "node63" // fileview2 -> thorhelper
+    "node63" -> "node151" // thorhelper -> jlib
+    "node63" -> "node147" // thorhelper -> nbcd
+    "node63" -> "node146" // thorhelper -> eclrtl
+    "node63" -> "node53" // thorhelper -> deftype
+    "node156" [ label="securesocket" shape="polygon"];
+    "node63" -> "node156" // thorhelper -> securesocket
+    "node156" -> "node151" // securesocket -> jlib
+    "node191" [ label="/usr/lib/x86_64-linux-gnu/libssl.so" shape="ellipse"];
+    "node156" -> "node191" // securesocket -> /usr/lib/x86_64-linux-gnu/libssl.so
+    "node192" [ label="/usr/lib/x86_64-linux-gnu/libcrypto.so" shape="ellipse"];
+    "node156" -> "node192" // securesocket -> /usr/lib/x86_64-linux-gnu/libcrypto.so
+    "node56" -> "node99" // fileview2 -> hql
+    "node112" -> "node156" // EclDirect -> securesocket
+}

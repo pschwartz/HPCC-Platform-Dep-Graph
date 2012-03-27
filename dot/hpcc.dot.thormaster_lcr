@@ -1,0 +1,203 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node167" [ label="thormaster_lcr" shape="house"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node167" -> "node151" // thormaster_lcr -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node150" [ label="jhtree" shape="polygon"];
+    "node167" -> "node150" // thormaster_lcr -> jhtree
+    "node150" -> "node151" // jhtree -> jlib
+    "node59" [ label="remote" shape="polygon"];
+    "node167" -> "node59" // thormaster_lcr -> remote
+    "node59" -> "node151" // remote -> jlib
+    "node153" [ label="mp" shape="polygon"];
+    "node59" -> "node153" // remote -> mp
+    "node153" -> "node151" // mp -> jlib
+    "node66" [ label="dalibase" shape="polygon"];
+    "node167" -> "node66" // thormaster_lcr -> dalibase
+    "node66" -> "node151" // dalibase -> jlib
+    "node66" -> "node153" // dalibase -> mp
+    "node149" [ label="hrpc" shape="polygon"];
+    "node66" -> "node149" // dalibase -> hrpc
+    "node149" -> "node151" // hrpc -> jlib
+    "node149" -> "node153" // hrpc -> mp
+    "node66" -> "node59" // dalibase -> remote
+    "node55" [ label="environment" shape="polygon"];
+    "node167" -> "node55" // thormaster_lcr -> environment
+    "node55" -> "node151" // environment -> jlib
+    "node55" -> "node153" // environment -> mp
+    "node55" -> "node59" // environment -> remote
+    "node55" -> "node66" // environment -> dalibase
+    "node54" [ label="dllserver" shape="polygon"];
+    "node167" -> "node54" // thormaster_lcr -> dllserver
+    "node176" [ label="/usr/lib/x86_64-linux-gnu/libz.so" shape="ellipse"];
+    "node54" -> "node176" // dllserver -> /usr/lib/x86_64-linux-gnu/libz.so
+    "node54" -> "node151" // dllserver -> jlib
+    "node54" -> "node153" // dllserver -> mp
+    "node54" -> "node149" // dllserver -> hrpc
+    "node146" [ label="eclrtl" shape="polygon"];
+    "node54" -> "node146" // dllserver -> eclrtl
+    "node186" [ label="/usr/lib/libboost_regex-mt.so" shape="ellipse"];
+    "node146" -> "node186" // eclrtl -> /usr/lib/libboost_regex-mt.so
+    "node183" [ label="/usr/lib/libicuuc.so" shape="ellipse"];
+    "node146" -> "node183" // eclrtl -> /usr/lib/libicuuc.so
+    "node184" [ label="/usr/lib/libicui18n.so" shape="ellipse"];
+    "node146" -> "node184" // eclrtl -> /usr/lib/libicui18n.so
+    "node185" [ label="/usr/lib/libicudata.so" shape="ellipse"];
+    "node146" -> "node185" // eclrtl -> /usr/lib/libicudata.so
+    "node146" -> "node151" // eclrtl -> jlib
+    "node147" [ label="nbcd" shape="polygon"];
+    "node146" -> "node147" // eclrtl -> nbcd
+    "node147" -> "node151" // nbcd -> jlib
+    "node54" -> "node59" // dllserver -> remote
+    "node54" -> "node66" // dllserver -> dalibase
+    "node54" -> "node55" // dllserver -> environment
+    "node177" [ label="/usr/lib/libbfd.so" shape="ellipse"];
+    "node54" -> "node177" // dllserver -> /usr/lib/libbfd.so
+    "node178" [ label="/usr/lib/libiberty_pic.a" shape="ellipse"];
+    "node54" -> "node178" // dllserver -> /usr/lib/libiberty_pic.a
+    "node167" -> "node147" // thormaster_lcr -> nbcd
+    "node167" -> "node146" // thormaster_lcr -> eclrtl
+    "node53" [ label="deftype" shape="polygon"];
+    "node167" -> "node53" // thormaster_lcr -> deftype
+    "node53" -> "node151" // deftype -> jlib
+    "node53" -> "node147" // deftype -> nbcd
+    "node53" -> "node146" // deftype -> eclrtl
+    "node64" [ label="workunit" shape="polygon"];
+    "node167" -> "node64" // thormaster_lcr -> workunit
+    "node64" -> "node151" // workunit -> jlib
+    "node64" -> "node66" // workunit -> dalibase
+    "node64" -> "node54" // workunit -> dllserver
+    "node64" -> "node147" // workunit -> nbcd
+    "node64" -> "node146" // workunit -> eclrtl
+    "node64" -> "node53" // workunit -> deftype
+    "node52" [ label="commonext" shape="polygon"];
+    "node167" -> "node52" // thormaster_lcr -> commonext
+    "node52" -> "node151" // commonext -> jlib
+    "node164" [ label="graph_lcr" shape="polygon"];
+    "node167" -> "node164" // thormaster_lcr -> graph_lcr
+    "node164" -> "node151" // graph_lcr -> jlib
+    "node164" -> "node150" // graph_lcr -> jhtree
+    "node164" -> "node59" // graph_lcr -> remote
+    "node164" -> "node66" // graph_lcr -> dalibase
+    "node164" -> "node55" // graph_lcr -> environment
+    "node164" -> "node54" // graph_lcr -> dllserver
+    "node164" -> "node147" // graph_lcr -> nbcd
+    "node164" -> "node146" // graph_lcr -> eclrtl
+    "node164" -> "node53" // graph_lcr -> deftype
+    "node164" -> "node64" // graph_lcr -> workunit
+    "node164" -> "node52" // graph_lcr -> commonext
+    "node63" [ label="thorhelper" shape="polygon"];
+    "node164" -> "node63" // graph_lcr -> thorhelper
+    "node63" -> "node151" // thorhelper -> jlib
+    "node63" -> "node147" // thorhelper -> nbcd
+    "node63" -> "node146" // thorhelper -> eclrtl
+    "node63" -> "node53" // thorhelper -> deftype
+    "node156" [ label="securesocket" shape="polygon"];
+    "node63" -> "node156" // thorhelper -> securesocket
+    "node156" -> "node151" // securesocket -> jlib
+    "node191" [ label="/usr/lib/x86_64-linux-gnu/libssl.so" shape="ellipse"];
+    "node156" -> "node191" // securesocket -> /usr/lib/x86_64-linux-gnu/libssl.so
+    "node192" [ label="/usr/lib/x86_64-linux-gnu/libcrypto.so" shape="ellipse"];
+    "node156" -> "node192" // securesocket -> /usr/lib/x86_64-linux-gnu/libcrypto.so
+    "node169" [ label="thorsort_lcr" shape="polygon"];
+    "node167" -> "node169" // thormaster_lcr -> thorsort_lcr
+    "node169" -> "node151" // thorsort_lcr -> jlib
+    "node169" -> "node146" // thorsort_lcr -> eclrtl
+    "node169" -> "node52" // thorsort_lcr -> commonext
+    "node169" -> "node63" // thorsort_lcr -> thorhelper
+    "node169" -> "node153" // thorsort_lcr -> mp
+    "node169" -> "node66" // thorsort_lcr -> dalibase
+    "node169" -> "node164" // thorsort_lcr -> graph_lcr
+    "node167" -> "node63" // thormaster_lcr -> thorhelper
+    "node171" [ label="thorcodectx_lcr" shape="polygon"];
+    "node167" -> "node171" // thormaster_lcr -> thorcodectx_lcr
+    "node171" -> "node164" // thorcodectx_lcr -> graph_lcr
+    "node171" -> "node151" // thorcodectx_lcr -> jlib
+    "node171" -> "node147" // thorcodectx_lcr -> nbcd
+    "node171" -> "node146" // thorcodectx_lcr -> eclrtl
+    "node171" -> "node53" // thorcodectx_lcr -> deftype
+    "node171" -> "node63" // thorcodectx_lcr -> thorhelper
+    "node171" -> "node59" // thorcodectx_lcr -> remote
+    "node171" -> "node66" // thorcodectx_lcr -> dalibase
+    "node171" -> "node55" // thorcodectx_lcr -> environment
+    "node171" -> "node54" // thorcodectx_lcr -> dllserver
+    "node171" -> "node64" // thorcodectx_lcr -> workunit
+    "node78" [ label="dalift" shape="polygon"];
+    "node167" -> "node78" // thormaster_lcr -> dalift
+    "node78" -> "node151" // dalift -> jlib
+    "node78" -> "node153" // dalift -> mp
+    "node78" -> "node149" // dalift -> hrpc
+    "node78" -> "node59" // dalift -> remote
+    "node78" -> "node66" // dalift -> dalibase
+    "node78" -> "node55" // dalift -> environment
+    "node168" [ label="mfilemanager_lcr" shape="polygon"];
+    "node167" -> "node168" // thormaster_lcr -> mfilemanager_lcr
+    "node168" -> "node151" // mfilemanager_lcr -> jlib
+    "node168" -> "node59" // mfilemanager_lcr -> remote
+    "node168" -> "node66" // mfilemanager_lcr -> dalibase
+    "node168" -> "node55" // mfilemanager_lcr -> environment
+    "node168" -> "node78" // mfilemanager_lcr -> dalift
+    "node168" -> "node54" // mfilemanager_lcr -> dllserver
+    "node168" -> "node147" // mfilemanager_lcr -> nbcd
+    "node168" -> "node146" // mfilemanager_lcr -> eclrtl
+    "node168" -> "node53" // mfilemanager_lcr -> deftype
+    "node168" -> "node64" // mfilemanager_lcr -> workunit
+    "node168" -> "node150" // mfilemanager_lcr -> jhtree
+    "node168" -> "node52" // mfilemanager_lcr -> commonext
+    "node168" -> "node164" // mfilemanager_lcr -> graph_lcr
+    "node165" [ label="graphmaster_lcr" shape="polygon"];
+    "node167" -> "node165" // thormaster_lcr -> graphmaster_lcr
+    "node165" -> "node151" // graphmaster_lcr -> jlib
+    "node165" -> "node52" // graphmaster_lcr -> commonext
+    "node165" -> "node150" // graphmaster_lcr -> jhtree
+    "node165" -> "node147" // graphmaster_lcr -> nbcd
+    "node165" -> "node146" // graphmaster_lcr -> eclrtl
+    "node165" -> "node53" // graphmaster_lcr -> deftype
+    "node165" -> "node63" // graphmaster_lcr -> thorhelper
+    "node165" -> "node59" // graphmaster_lcr -> remote
+    "node165" -> "node66" // graphmaster_lcr -> dalibase
+    "node165" -> "node55" // graphmaster_lcr -> environment
+    "node165" -> "node54" // graphmaster_lcr -> dllserver
+    "node165" -> "node64" // graphmaster_lcr -> workunit
+    "node165" -> "node171" // graphmaster_lcr -> thorcodectx_lcr
+    "node165" -> "node164" // graphmaster_lcr -> graph_lcr
+    "node165" -> "node78" // graphmaster_lcr -> dalift
+    "node165" -> "node168" // graphmaster_lcr -> mfilemanager_lcr
+    "node162" [ label="activitymasters_lcr" shape="polygon"];
+    "node167" -> "node162" // thormaster_lcr -> activitymasters_lcr
+    "node162" -> "node151" // activitymasters_lcr -> jlib
+    "node162" -> "node59" // activitymasters_lcr -> remote
+    "node162" -> "node169" // activitymasters_lcr -> thorsort_lcr
+    "node162" -> "node52" // activitymasters_lcr -> commonext
+    "node162" -> "node150" // activitymasters_lcr -> jhtree
+    "node162" -> "node147" // activitymasters_lcr -> nbcd
+    "node162" -> "node146" // activitymasters_lcr -> eclrtl
+    "node162" -> "node53" // activitymasters_lcr -> deftype
+    "node162" -> "node63" // activitymasters_lcr -> thorhelper
+    "node162" -> "node66" // activitymasters_lcr -> dalibase
+    "node162" -> "node55" // activitymasters_lcr -> environment
+    "node162" -> "node54" // activitymasters_lcr -> dllserver
+    "node162" -> "node64" // activitymasters_lcr -> workunit
+    "node162" -> "node171" // activitymasters_lcr -> thorcodectx_lcr
+    "node162" -> "node164" // activitymasters_lcr -> graph_lcr
+    "node162" -> "node78" // activitymasters_lcr -> dalift
+    "node162" -> "node168" // activitymasters_lcr -> mfilemanager_lcr
+    "node162" -> "node165" // activitymasters_lcr -> graphmaster_lcr
+    "node45" [ label="swapnodelib" shape="polygon"];
+    "node167" -> "node45" // thormaster_lcr -> swapnodelib
+    "node45" -> "node151" // swapnodelib -> jlib
+    "node45" -> "node59" // swapnodelib -> remote
+    "node45" -> "node66" // swapnodelib -> dalibase
+    "node45" -> "node64" // swapnodelib -> workunit
+    "node45" -> "node55" // swapnodelib -> environment
+}

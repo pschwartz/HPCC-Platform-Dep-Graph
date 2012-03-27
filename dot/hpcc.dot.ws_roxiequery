@@ -1,0 +1,176 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node121" [ label="ws_roxiequery" shape="polygon"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node121" -> "node151" // ws_roxiequery -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node56" [ label="fileview2" shape="polygon"];
+    "node121" -> "node56" // ws_roxiequery -> fileview2
+    "node56" -> "node151" // fileview2 -> jlib
+    "node153" [ label="mp" shape="polygon"];
+    "node56" -> "node153" // fileview2 -> mp
+    "node153" -> "node151" // mp -> jlib
+    "node149" [ label="hrpc" shape="polygon"];
+    "node56" -> "node149" // fileview2 -> hrpc
+    "node149" -> "node151" // hrpc -> jlib
+    "node149" -> "node153" // hrpc -> mp
+    "node59" [ label="remote" shape="polygon"];
+    "node56" -> "node59" // fileview2 -> remote
+    "node59" -> "node151" // remote -> jlib
+    "node59" -> "node153" // remote -> mp
+    "node147" [ label="nbcd" shape="polygon"];
+    "node56" -> "node147" // fileview2 -> nbcd
+    "node147" -> "node151" // nbcd -> jlib
+    "node146" [ label="eclrtl" shape="polygon"];
+    "node56" -> "node146" // fileview2 -> eclrtl
+    "node186" [ label="/usr/lib/libboost_regex-mt.so" shape="ellipse"];
+    "node146" -> "node186" // eclrtl -> /usr/lib/libboost_regex-mt.so
+    "node183" [ label="/usr/lib/libicuuc.so" shape="ellipse"];
+    "node146" -> "node183" // eclrtl -> /usr/lib/libicuuc.so
+    "node184" [ label="/usr/lib/libicui18n.so" shape="ellipse"];
+    "node146" -> "node184" // eclrtl -> /usr/lib/libicui18n.so
+    "node185" [ label="/usr/lib/libicudata.so" shape="ellipse"];
+    "node146" -> "node185" // eclrtl -> /usr/lib/libicudata.so
+    "node146" -> "node151" // eclrtl -> jlib
+    "node146" -> "node147" // eclrtl -> nbcd
+    "node150" [ label="jhtree" shape="polygon"];
+    "node56" -> "node150" // fileview2 -> jhtree
+    "node150" -> "node151" // jhtree -> jlib
+    "node66" [ label="dalibase" shape="polygon"];
+    "node56" -> "node66" // fileview2 -> dalibase
+    "node66" -> "node151" // dalibase -> jlib
+    "node66" -> "node153" // dalibase -> mp
+    "node66" -> "node149" // dalibase -> hrpc
+    "node66" -> "node59" // dalibase -> remote
+    "node55" [ label="environment" shape="polygon"];
+    "node56" -> "node55" // fileview2 -> environment
+    "node55" -> "node151" // environment -> jlib
+    "node55" -> "node153" // environment -> mp
+    "node55" -> "node59" // environment -> remote
+    "node55" -> "node66" // environment -> dalibase
+    "node54" [ label="dllserver" shape="polygon"];
+    "node56" -> "node54" // fileview2 -> dllserver
+    "node176" [ label="/usr/lib/x86_64-linux-gnu/libz.so" shape="ellipse"];
+    "node54" -> "node176" // dllserver -> /usr/lib/x86_64-linux-gnu/libz.so
+    "node54" -> "node151" // dllserver -> jlib
+    "node54" -> "node153" // dllserver -> mp
+    "node54" -> "node149" // dllserver -> hrpc
+    "node54" -> "node146" // dllserver -> eclrtl
+    "node54" -> "node59" // dllserver -> remote
+    "node54" -> "node66" // dllserver -> dalibase
+    "node54" -> "node55" // dllserver -> environment
+    "node177" [ label="/usr/lib/libbfd.so" shape="ellipse"];
+    "node54" -> "node177" // dllserver -> /usr/lib/libbfd.so
+    "node178" [ label="/usr/lib/libiberty_pic.a" shape="ellipse"];
+    "node54" -> "node178" // dllserver -> /usr/lib/libiberty_pic.a
+    "node53" [ label="deftype" shape="polygon"];
+    "node56" -> "node53" // fileview2 -> deftype
+    "node53" -> "node151" // deftype -> jlib
+    "node53" -> "node147" // deftype -> nbcd
+    "node53" -> "node146" // deftype -> eclrtl
+    "node64" [ label="workunit" shape="polygon"];
+    "node56" -> "node64" // fileview2 -> workunit
+    "node64" -> "node151" // workunit -> jlib
+    "node64" -> "node66" // workunit -> dalibase
+    "node64" -> "node54" // workunit -> dllserver
+    "node64" -> "node147" // workunit -> nbcd
+    "node64" -> "node146" // workunit -> eclrtl
+    "node64" -> "node53" // workunit -> deftype
+    "node63" [ label="thorhelper" shape="polygon"];
+    "node56" -> "node63" // fileview2 -> thorhelper
+    "node63" -> "node151" // thorhelper -> jlib
+    "node63" -> "node147" // thorhelper -> nbcd
+    "node63" -> "node146" // thorhelper -> eclrtl
+    "node63" -> "node53" // thorhelper -> deftype
+    "node156" [ label="securesocket" shape="polygon"];
+    "node63" -> "node156" // thorhelper -> securesocket
+    "node156" -> "node151" // securesocket -> jlib
+    "node191" [ label="/usr/lib/x86_64-linux-gnu/libssl.so" shape="ellipse"];
+    "node156" -> "node191" // securesocket -> /usr/lib/x86_64-linux-gnu/libssl.so
+    "node192" [ label="/usr/lib/x86_64-linux-gnu/libcrypto.so" shape="ellipse"];
+    "node156" -> "node192" // securesocket -> /usr/lib/x86_64-linux-gnu/libcrypto.so
+    "node99" [ label="hql" shape="polygon"];
+    "node56" -> "node99" // fileview2 -> hql
+    "node99" -> "node151" // hql -> jlib
+    "node99" -> "node147" // hql -> nbcd
+    "node99" -> "node146" // hql -> eclrtl
+    "node99" -> "node53" // hql -> deftype
+    "node121" -> "node59" // ws_roxiequery -> remote
+    "node180" [ label="/usr/lib/libxalan-c.so" shape="ellipse"];
+    "node121" -> "node180" // ws_roxiequery -> /usr/lib/libxalan-c.so
+    "node181" [ label="/usr/lib/libxalanMsg.so" shape="ellipse"];
+    "node121" -> "node181" // ws_roxiequery -> /usr/lib/libxalanMsg.so
+    "node182" [ label="/usr/lib/libxerces-c.so" shape="ellipse"];
+    "node121" -> "node182" // ws_roxiequery -> /usr/lib/libxerces-c.so
+    "node160" [ label="xmllib" shape="polygon"];
+    "node121" -> "node160" // ws_roxiequery -> xmllib
+    "node160" -> "node180" // xmllib -> /usr/lib/libxalan-c.so
+    "node160" -> "node181" // xmllib -> /usr/lib/libxalanMsg.so
+    "node160" -> "node182" // xmllib -> /usr/lib/libxerces-c.so
+    "node160" -> "node151" // xmllib -> jlib
+    "node110" [ label="esphttp" shape="polygon"];
+    "node121" -> "node110" // ws_roxiequery -> esphttp
+    "node110" -> "node180" // esphttp -> /usr/lib/libxalan-c.so
+    "node110" -> "node181" // esphttp -> /usr/lib/libxalanMsg.so
+    "node110" -> "node182" // esphttp -> /usr/lib/libxerces-c.so
+    "node110" -> "node151" // esphttp -> jlib
+    "node110" -> "node160" // esphttp -> xmllib
+    "node121" -> "node66" // ws_roxiequery -> dalibase
+    "node121" -> "node55" // ws_roxiequery -> environment
+    "node78" [ label="dalift" shape="polygon"];
+    "node121" -> "node78" // ws_roxiequery -> dalift
+    "node78" -> "node151" // dalift -> jlib
+    "node78" -> "node153" // dalift -> mp
+    "node78" -> "node149" // dalift -> hrpc
+    "node78" -> "node59" // dalift -> remote
+    "node78" -> "node66" // dalift -> dalibase
+    "node78" -> "node55" // dalift -> environment
+    "node121" -> "node54" // ws_roxiequery -> dllserver
+    "node121" -> "node147" // ws_roxiequery -> nbcd
+    "node121" -> "node146" // ws_roxiequery -> eclrtl
+    "node121" -> "node53" // ws_roxiequery -> deftype
+    "node121" -> "node64" // ws_roxiequery -> workunit
+    "node127" [ label="SMCLib" shape="polygon"];
+    "node121" -> "node127" // ws_roxiequery -> SMCLib
+    "node127" -> "node151" // SMCLib -> jlib
+    "node127" -> "node59" // SMCLib -> remote
+    "node127" -> "node160" // SMCLib -> xmllib
+    "node127" -> "node110" // SMCLib -> esphttp
+    "node127" -> "node66" // SMCLib -> dalibase
+    "node127" -> "node55" // SMCLib -> environment
+    "node127" -> "node78" // SMCLib -> dalift
+    "node127" -> "node54" // SMCLib -> dllserver
+    "node127" -> "node147" // SMCLib -> nbcd
+    "node127" -> "node146" // SMCLib -> eclrtl
+    "node127" -> "node53" // SMCLib -> deftype
+    "node127" -> "node64" // SMCLib -> workunit
+    "node60" [ label="roxiecommlib" shape="polygon"];
+    "node121" -> "node60" // ws_roxiequery -> roxiecommlib
+    "node60" -> "node151" // roxiecommlib -> jlib
+    "node62" [ label="roxiemanager" shape="polygon"];
+    "node121" -> "node62" // ws_roxiequery -> roxiemanager
+    "node62" -> "node151" // roxiemanager -> jlib
+    "node62" -> "node60" // roxiemanager -> roxiecommlib
+    "node62" -> "node153" // roxiemanager -> mp
+    "node62" -> "node149" // roxiemanager -> hrpc
+    "node62" -> "node59" // roxiemanager -> remote
+    "node62" -> "node66" // roxiemanager -> dalibase
+    "node62" -> "node55" // roxiemanager -> environment
+    "node62" -> "node54" // roxiemanager -> dllserver
+    "node62" -> "node147" // roxiemanager -> nbcd
+    "node62" -> "node146" // roxiemanager -> eclrtl
+    "node62" -> "node53" // roxiemanager -> deftype
+    "node62" -> "node64" // roxiemanager -> workunit
+    "node62" -> "node150" // roxiemanager -> jhtree
+    "node62" -> "node99" // roxiemanager -> hql
+    "node62" -> "node56" // roxiemanager -> fileview2
+}

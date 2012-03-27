@@ -1,0 +1,30 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node41" [ label="keydiff" shape="house"];
+    "node151" [ label="jlib" shape="polygon"];
+    "node41" -> "node151" // keydiff -> jlib
+    "node152" [ label="lzma" shape="diamond"];
+    "node151" -> "node152" // jlib -> lzma
+    "node187" [ label="dl" shape="ellipse"];
+    "node151" -> "node187" // jlib -> dl
+    "node179" [ label="crypt" shape="ellipse"];
+    "node151" -> "node179" // jlib -> crypt
+    "node188" [ label="rt" shape="ellipse"];
+    "node151" -> "node188" // jlib -> rt
+    "node150" [ label="jhtree" shape="polygon"];
+    "node41" -> "node150" // keydiff -> jhtree
+    "node150" -> "node151" // jhtree -> jlib
+    "node153" [ label="mp" shape="polygon"];
+    "node41" -> "node153" // keydiff -> mp
+    "node153" -> "node151" // mp -> jlib
+    "node149" [ label="hrpc" shape="polygon"];
+    "node41" -> "node149" // keydiff -> hrpc
+    "node149" -> "node151" // hrpc -> jlib
+    "node149" -> "node153" // hrpc -> mp
+    "node59" [ label="remote" shape="polygon"];
+    "node41" -> "node59" // keydiff -> remote
+    "node59" -> "node151" // remote -> jlib
+    "node59" -> "node153" // remote -> mp
+}

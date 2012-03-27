@@ -1,0 +1,6 @@
+digraph GG {
+node [
+  fontsize = "12"
+];
+    "node152" [ label="lzma" shape="diamond"];
+}
